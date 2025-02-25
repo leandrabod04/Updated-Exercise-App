@@ -41,7 +41,7 @@ function ExerciseButtons() {
 
 function App() {
   return (
-    <Router>
+    <Router basename="/Updated-Exercise-App">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/plank" element={<DurationExercise exerciseName="Plank" />} />
