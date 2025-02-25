@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes, useNavigate } from "react-router-dom";
 import RepetitionExercise from "./components/RepetitionExercise";
 import DurationExercise from "./components/DurationExercise";
+import RunningExercise from "./components/RunningExercise";
 import "./App.css"
 
 function Home() {
@@ -28,7 +29,7 @@ function ExerciseButtons() {
           <button onClick={() => navigate("/push-ups")}>Push Ups</button>
         </li>
         <li>
-          <button>Running</button>
+          <button onClick={() => navigate("/running")}>Running</button>
         </li>
         <li>
           <button>Crunches</button>
@@ -43,8 +44,9 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/plank" element={<DurationExercise />} />
-        <Route path="/push-ups" element={<RepetitionExercise />} />
+        <Route path="/plank" element={<DurationExercise exerciseName="Plank" />} />
+        <Route path="/push-ups" element={<RepetitionExercise exerciseName="Push Ups" />} />
+        <Route path="/running" element={<RunningExercise exerciseName="Running" />} />
       </Routes>
     </Router>
   );

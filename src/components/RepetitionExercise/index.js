@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-function PushUp() {
+function RepetitionExercise({ exerciseName }) {
     const [count, setCount] = useState(0);
 
     return (
         <div>
-            <h2>Push Ups</h2>
+            <h2>{exerciseName}</h2>
             <p>Repetitions: {count}</p>
             <button onClick={() => setCount(count + 1)}>Increase</button>
             <button onClick={() => setCount(0)}>Reset</button>
@@ -13,4 +13,4 @@ function PushUp() {
     );
 }
 
-export default PushUp;
+export default RepetitionExercise;

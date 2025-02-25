@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 
-function DurationExercise() {
+function DurationExercise({ exerciseName }) {
     const [time, setTime] = useState(0);
     const [isPlank, setIsPlank] = useState(false);
     const timerRef = useRef(null);
@@ -31,7 +31,7 @@ function DurationExercise() {
 
     return (
         <div>
-            <h2>Plank</h2>
+            <h2>{exerciseName}</h2>
             <p>Time: {formatTime(time)}</p>
             <button onClick={handleStartStop}>{isPlank ? "Stop" : "Start"}</button>
             <button onClick={handleReset}>Reset</button>
